@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Seminar 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Seminar 5</h1>
+    <div>
+        <button id="getPostsButton" onclick="callGetPosts()">Get posts</button>
+        <button id="createPostButton" onclick="callCreatePost()">Create post</button>
+        <button id="deletePost" onclick="callDeletePosts()">Delete posts</button>
+    </div>
+
+    <div>
+        <form id="postForm" style="display: flex-row;">
+            <label>User id:</label>
+            <input type="number" id="postUserId"></input> <br></br>
+
+            <label>Title: </label>
+            <input type="text" id="postTitle"></input> <br></br>
+
+            <label>Body: </label>
+            <input type="text" id="postBody"></input> <br></br>
+
+            <button id="postButton" onclick="postForm(event)">Submit</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="Seminar5.js"></script>
+</body>
+
+
+</html>

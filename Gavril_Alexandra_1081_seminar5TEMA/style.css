@@ -1,0 +1,21 @@
+#renderTable {
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+td,
+th {
+  border: 1px solid black;
+}
+
+#postForm {
+  margin-top: 20px;
+  width: 10%;
+}
+
+.submit-btns {
+  display: inline-flex;
+}
+#submitEditBtn {
+  margin-left: 5px;
+}

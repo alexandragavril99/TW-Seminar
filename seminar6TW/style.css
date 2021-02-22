@@ -1,0 +1,208 @@
+/* Main selectors */
+
+/* selectorul pe id este cel mai puternic, dupa e cel de clasa,
+ dupa cel pe element(p gen)*/
+
+#mainParagraph {
+  background-color: blue;
+  color: white;
+}
+
+.mainClass {
+  background-color: teal;
+  color: white;
+}
+
+p {
+  background-color: yellowgreen;
+  color: white;
+}
+/* Main selectors */
+
+/* Combining selectors + universal */
+
+.wrapper #mainParagraph {
+  background-color: aqua;
+  color: black;
+}
+
+#mainDiv .mainClass {
+  background-color: brown;
+  color: white;
+  padding: 5px;
+}
+
+/* * p {
+  background-color: red;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+} */
+
+/* Combining selector + universal */
+
+/* */
+
+/* aici e selectata clasa wrapper si primul paragraf p ruda cu el */
+.wrapper + p {
+  background-color: tomato;
+  padding: 10px;
+}
+
+/* aici e selectata clasa wrapper si toate p rude cu el(pe acelasi nivel) */
+.wrapper ~ p {
+  background-color: aquamarine;
+  padding: 10px;
+  color: black;
+}
+
+/* aici selecteaza copiii din clasa wrapper */
+.wrapper > p {
+  background-color: darkviolet;
+  color: white;
+}
+
+/* */
+
+/* */
+a[href] {
+  background-color: seagreen;
+  color: white;
+}
+
+a[target="_blank"] {
+  background-color: aliceblue;
+  color: black;
+}
+/* target^="_bl" ia toate elem a care incep cu bl */
+/* target$="nk" ia toate elem care se termina cu nk */
+/* target*="lan" ia toate elem care contin lan */
+/* customAttr="value" */
+
+/* */
+
+/*PSEUDO clase/elemente*/
+a:link {
+  background-color: chocolate;
+  color: white;
+  padding: 10px;
+}
+
+a:visited {
+  background-color: black;
+  color: white;
+}
+
+p:hover {
+  background-color: black;
+  color: white;
+}
+
+a:active {
+  background-color: turquoise;
+  color: black;
+}
+
+a:focus {
+  background-color: sienna;
+  color: black;
+}
+
+.wrapper2 :first-child {
+  background-color: springgreen;
+  color: black;
+}
+
+.wrapper2 :last-child {
+  background-color: steelblue;
+  color: white;
+}
+
+.wrapper3 :only-child {
+  background-color: steelblue;
+  color: white;
+}
+
+/* poate prim un nr, odd-ia nr impare, even- ia nr pare,sau 
+functie de tipul ax+b*/
+/* in ex de sub incepem de la al 2lea elem din 3 in 3 */
+.wrapper2:nth-child(3n + 2) {
+  background-color: slateblue;
+  color: white;
+}
+
+/* asta e ca mai sus dar incepe invers*/
+.wrapper2 :nth-last-child(3n + 2) {
+  background-color: slategray;
+  color: black;
+}
+
+.wrapper2 p:first-of-type {
+  background-color: turquoise;
+  color: black;
+}
+
+.wrapper2 p:last-of-type {
+  background-color: turquoise;
+  color: black;
+}
+
+.wrapper3 p:only-of-type {
+  background-color: turquoise;
+  color: black;
+}
+
+.wrapper2 p:nth-of-type(odd) {
+  background-color: red;
+  color: white;
+}
+
+.wrapper2 p:nth-last-of-type(odd) {
+  background-color: blue;
+  color: white;
+}
+
+p::first-letter {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+p::first-line {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+::selection {
+  background-color: chartreuse;
+  color: black;
+}
+
+p::before {
+  content: attr(name);
+}
+
+p::after {
+  content: " This is after";
+}
+
+p:not(#mainParagraph) {
+  background-color: coral;
+  color: black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p:empty {
+  font-weight: bolder;
+}
+
+p:target {
+  background-color: crimson;
+  color: white;
+  font-style: italic;
+}
+/*PSEUDO*/

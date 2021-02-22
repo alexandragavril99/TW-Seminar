@@ -1,0 +1,14 @@
+#renderTable {
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+td,
+th {
+  border: 1px solid black;
+}
+
+#postForm {
+  margin-top: 20px;
+  width: 10%;
+}
